@@ -3,15 +3,15 @@ package com.microservice.email.adapter.outbound.persistence.repository;
 import com.microservice.email.adapter.outbound.persistence.springdata.EmailRepositorySpringData;
 import com.microservice.email.adapter.outbound.persistence.entity.EmailEntity;
 import com.microservice.email.application.domain.Email;
+import com.microservice.email.application.domain.PageInfo;
 import com.microservice.email.application.port.EmailRepositoryPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
-import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -37,7 +37,7 @@ public class EmailRepository implements EmailRepositoryPort {
     }
 
     @Override
-    public Collection<Email> findAll(Pageable pageInfo) {
+    public List<Email> findAll(PageInfo pageInfo) {
         var pageable = PageRequest.of(pageInfo.getPageNumber(), pageInfo.getPageSize());
         return emailRepository.findAll(pageable).stream().map(this::converter)
                 .collect(Collectors.toList());

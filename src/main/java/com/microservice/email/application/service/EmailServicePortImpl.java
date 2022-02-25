@@ -1,14 +1,14 @@
 package com.microservice.email.application.service;
 
 import com.microservice.email.application.domain.Email;
+import com.microservice.email.application.domain.PageInfo;
 import com.microservice.email.application.domain.enums.StatusEmailEnum;
 import com.microservice.email.application.port.EmailRepositoryPort;
 import com.microservice.email.application.port.EmailSendServicePort;
 import com.microservice.email.application.port.EmailServicePort;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -24,8 +24,8 @@ public class EmailServicePortImpl implements EmailServicePort {
 
 
     @Override
-    public Page<Email> findAll(Pageable pageable) {
-        return null;
+    public List<Email> findAll(PageInfo pageInfo) {
+        return emailRepositoryPort.findAll(pageInfo);
     }
 
     @Override

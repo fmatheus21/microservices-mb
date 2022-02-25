@@ -1,7 +1,6 @@
-package com.microservice.email.adapter.outbound.persistence.smtp;
+package com.microservice.email.adapter.outbound.smtp;
 
 import com.microservice.email.application.domain.Email;
-import com.microservice.email.application.domain.enums.StatusEmailEnum;
 import com.microservice.email.application.port.EmailSendServicePort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
@@ -23,6 +22,5 @@ public class EmailSendServiceSmtp implements EmailSendServicePort {
         message.setSubject(email.getSubject());
         message.setText(email.getText());
         this.mailSender.send(message);
-        email.setStatus(StatusEmailEnum.SENT);
     }
 }

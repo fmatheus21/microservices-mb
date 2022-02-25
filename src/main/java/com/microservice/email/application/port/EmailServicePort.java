@@ -1,16 +1,16 @@
 package com.microservice.email.application.port;
 
 import com.microservice.email.application.domain.Email;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import com.microservice.email.application.domain.PageInfo;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 
 public interface EmailServicePort {
 
-    Page<Email> findAll(Pageable pageable);
+    List<Email> findAll(PageInfo pageInfo);
 
     Email sendEmail(Email email);
 
