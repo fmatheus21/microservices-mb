@@ -1,7 +1,7 @@
-package com.microservice.email.adapter.inbound.resource;
+package com.microservice.email.adapter.bound.inbound.resource;
 
 import com.microservice.email.adapter.dto.request.EmailDtoRequest;
-import com.microservice.email.adapter.inbound.rule.EmailRule;
+import com.microservice.email.adapter.bound.inbound.rule.EmailRule;
 import com.microservice.email.application.domain.Email;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

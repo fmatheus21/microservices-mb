@@ -1,4 +1,4 @@
-package com.microservice.email.adapter.outbound.smtp;
+package com.microservice.email.adapter.bound.outbound.smtp;
 
 import com.microservice.email.application.domain.Email;
 import com.microservice.email.application.port.EmailSendServicePort;

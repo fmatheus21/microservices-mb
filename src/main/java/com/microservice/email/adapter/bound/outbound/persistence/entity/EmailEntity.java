@@ -1,4 +1,4 @@
-package com.microservice.email.adapter.outbound.persistence.entity;
+package com.microservice.email.adapter.bound.outbound.persistence.entity;
 
 import com.microservice.email.application.domain.enums.StatusEmailEnum;
 import lombok.*;

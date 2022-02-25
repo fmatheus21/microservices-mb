@@ -1,4 +1,4 @@
-package com.microservice.email.adapter.inbound.converter;
+package com.microservice.email.adapter.bound.inbound.converter;
 
 import com.microservice.email.adapter.dto.request.EmailDtoRequest;
 import com.microservice.email.application.domain.Email;

@@ -1,7 +1,7 @@
-package com.microservice.email.adapter.inbound.rule;
+package com.microservice.email.adapter.bound.inbound.rule;
 
 import com.microservice.email.adapter.dto.request.EmailDtoRequest;
-import com.microservice.email.adapter.inbound.converter.EmailInboundConverter;
+import com.microservice.email.adapter.bound.inbound.converter.EmailInboundConverter;
 import com.microservice.email.application.domain.Email;
 import com.microservice.email.application.domain.PageInfo;
 import com.microservice.email.application.port.EmailServicePort;

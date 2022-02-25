@@ -1,7 +1,7 @@
-package com.microservice.email.adapter.outbound.persistence.repository;
+package com.microservice.email.adapter.bound.outbound.persistence.repository;
 
-import com.microservice.email.adapter.outbound.persistence.springdata.EmailRepositorySpringData;
-import com.microservice.email.adapter.outbound.persistence.entity.EmailEntity;
+import com.microservice.email.adapter.bound.outbound.persistence.entity.EmailEntity;
+import com.microservice.email.adapter.bound.outbound.persistence.springdata.EmailRepositorySpringData;
 import com.microservice.email.application.domain.Email;
 import com.microservice.email.application.domain.PageInfo;
 import com.microservice.email.application.port.EmailRepositoryPort;

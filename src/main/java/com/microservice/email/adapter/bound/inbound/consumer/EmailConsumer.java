@@ -1,7 +1,7 @@
-package com.microservice.email.adapter.inbound.consumer;
+package com.microservice.email.adapter.bound.inbound.consumer;
 
+import com.microservice.email.adapter.bound.inbound.converter.EmailInboundConverter;
 import com.microservice.email.adapter.dto.request.EmailDtoRequest;
-import com.microservice.email.adapter.inbound.converter.EmailInboundConverter;
 import com.microservice.email.application.port.EmailServicePort;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
