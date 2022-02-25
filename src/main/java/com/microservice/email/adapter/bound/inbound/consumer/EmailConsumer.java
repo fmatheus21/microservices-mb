@@ -1,6 +1,6 @@
 package com.microservice.email.adapter.bound.inbound.consumer;
 
-import com.microservice.email.adapter.bound.inbound.converter.EmailInboundConverter;
+import com.microservice.email.adapter.converter.EmailConverter;
 import com.microservice.email.adapter.dto.request.EmailDtoRequest;
 import com.microservice.email.application.port.EmailServicePort;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class EmailConsumer {
 
     @Autowired
-    private EmailInboundConverter converter;
+    private EmailConverter converter;
 
     @Autowired
     EmailServicePort emailServicePort;

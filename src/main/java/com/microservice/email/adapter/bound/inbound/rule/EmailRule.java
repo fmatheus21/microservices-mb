@@ -1,7 +1,7 @@
 package com.microservice.email.adapter.bound.inbound.rule;
 
 import com.microservice.email.adapter.dto.request.EmailDtoRequest;
-import com.microservice.email.adapter.bound.inbound.converter.EmailInboundConverter;
+import com.microservice.email.adapter.converter.EmailConverter;
 import com.microservice.email.application.domain.Email;
 import com.microservice.email.application.domain.PageInfo;
 import com.microservice.email.application.port.EmailServicePort;
@@ -27,7 +27,7 @@ public class EmailRule {
 
 
     @Autowired
-    private EmailInboundConverter emailConverter;
+    private EmailConverter emailConverter;
 
     public ResponseEntity<Email> send(EmailDtoRequest request) {
         var email = this.emailConverter.converterRequest(request);
